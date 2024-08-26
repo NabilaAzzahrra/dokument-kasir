@@ -56,3 +56,88 @@ Rancangan database aplikasi kasir ini dapat di lihat [disini](https://dbdiagram.
 ![](/img/landing.png ':size=1000')
 
 Pada landing terdapat login dan register yang siap untuk digunakan ``silahkan kalian buat akun terlebih dahulu`` 
+
+### Membuat Menu
+
+Berikut menu yang akan kita buat pada aplikasi kasir ini
+- Dashboard
+- Master
+  - Konsumen
+  - Produk
+  - Supplier
+  - Konsinyasi
+  - Konsinyasi Produk
+- Transaksi
+  - Pembelian
+  - Penjualan
+- Report
+  - Pembelian
+  - Penjualan
+  - Konsinyasi
+  - Piutang
+
+***Membuat Menu***
+
+1. Buka file ``navigation.blade.php`` pada folder resource
+   
+   ![](/img/navigation.png ':size=200')
+
+2. Lihat kode pada gambar dibawah ini
+
+    ![](/img/menu.png ':size=800')
+
+    Buatlah kode berikut di **bawah** kode yang ada di gambar di atas
+
+```html
+                
+                <div class="hidden sm:flex sm:items-center sm:ms-6">
+                    <li class="relative list-none">
+                        <x-dropdown>
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                    <div>Master</div>
+
+                                    <div class="ms-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"> <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <x-dropdown-link :href="route('dashboard')">
+                                    {{ __('Konsumen') }}
+                                </x-dropdown-link>
+
+                                <x-dropdown-link :href="route('dashboard')">
+                                    {{ __('Produk') }}
+                                </x-dropdown-link>
+
+                                <x-dropdown-link :href="route('dashboard')">
+                                    {{ __('Supplier') }}
+                                </x-dropdown-link>
+
+                                <x-dropdown-link :href="route('dashboard')">
+                                    {{ __('Konsinyasi') }}
+                                </x-dropdown-link>
+
+                                <x-dropdown-link :href="route('dashboard')">
+                                    {{ __('Konsinyasi Produk') }}
+                                </x-dropdown-link>
+                            </x-slot>
+                        </x-dropdown>
+                    </li>
+                </div>
+```
+   
+Hasilnya seperti ini:
+
+![](/img/menu_master.png ':size=1000')
+
+3. Buat Menu selanjutnya yaitu menu ``Transaksi`` dan menu ``Report`` yang sub menunya sudah disebutkan di atas sehingga hasilnya seperti ini:
+
+![](/img/menu_navigation.png ':size=1000')
