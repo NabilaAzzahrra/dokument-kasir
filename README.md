@@ -43,4 +43,16 @@ Rancangan database aplikasi kasir ini dapat di lihat [disini](https://dbdiagram.
 
 ![](/img/env_edit.png ':size=300')
 
+> buat database pada MySQL dengan nama ``kasir_re``
+
+![](/img/database.png ':size=500')
+
 > Note : Nama Database yang digunakan adalah *kasir_re* untuk database menggunakan *MySQL* dan setelah di ubah maka ketikkan kode berikut di terminal ``php artisan migrate``
+
+### Membuat Akun
+
+> Form login dan register sudah dapat digunakan, karena kita menggunakan template dari breeze
+
+![](/img/landing.png ':size=1000')
+
+Pada landing terdapat login dan register yang siap untuk digunakan ``silahkan kalian buat akun terlebih dahulu`` 
