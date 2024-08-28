@@ -18,6 +18,14 @@ Rancangan database aplikasi kasir ini dapat di lihat [disini](https://dbdiagram.
 
 ## Tahap Develop
 
+> Ada beberapa extention pada visual studio code yang dapat di install untuk mempermudah dalam tahap pembuatan aplikasi kasir ini
+
+![](/img/extention1.png ':size=300')
+
+![](/img/extention2.png ':size=300')
+
+![](/img/extention3.png ':size=300')
+
 ### Installasi Laravel Breeze
 
 > Laravel Breeze merupakan template dari laravel yang sudah menggunakan tailwindcss.
@@ -164,6 +172,39 @@ sehingga kodenya seperti ini:
 
 kemudian ketik ``php artisan migrate`` pada terminal untuk membuat table konsumen tersebut di MySQL.
 
+4. Membuat model Konsumen
+   Jalankan kode berikut ``php artisan make:model Konsumen`` kemudian buka file model yang sudah dibuat, lokasinya seperti gambar di bawah
+
+![](/img/model_konsumen.png ':size=400')
+
+ketikkan kode berikut dibawah kode HaFactory;
+
+```html
+    protected $fillable = [
+        'konsumen',
+        'status'
+    ];
+
+    protected $table = 'konsumen';
+```
+
+sehingga kode seperti ini
+
+![](/img/isi_model_konsumen.png ':size=400')
+
+5. Buat controller Konsumen dan controller API Konsumen
+
+ketikkan kode berikut pada terminal ``php artisan make:controller KonsumenController --resource`` dan kode berikut ``php artisan make:controller API/KonsumenAPIController``
+
+6. Buat route untuk memanggil halaman konsumen, buka file web.php kemudian ketik kode berikut ``Route::resource('konsumen', KonsumenController::class)->middleware('auth');``
+
+> Pastikan ketika mengetikkan KonsumenController itu harus ada yang di import yakni file KonsumenController, contohnya ada di bawah
+
+![](/img/route_konsumen.png ':size=800')
+
+hasil importnya ada di bagian atas seperti ini
+
+![](/img/import_konsumen.png ':size=400')
 
 
 
