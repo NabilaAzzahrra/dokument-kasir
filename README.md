@@ -141,3 +141,29 @@ Hasilnya seperti ini:
 3. Buat Menu selanjutnya yaitu menu ``Transaksi`` dan menu ``Report`` yang sub menunya sudah disebutkan di atas sehingga hasilnya seperti ini:
 
 ![](/img/menu_navigation.png ':size=1000')
+
+### Membuat Halaman Konsumen
+
+
+1. Membuat table konsumen
+    jalankan kode ini pada terminal ``php artisan make:migration create_konsumen``
+2. Buka file migration yang sudah dibuat, lokasinya seperti pada gambar di bawah
+   
+   ![](/img/create_table_konsumen.png ':size=300')
+
+3. ketik kode berikut dibawah id
+
+```html
+$table->string('konsumen');
+$table->string('status');
+```
+
+sehingga kodenya seperti ini:
+
+![](/img/kolom_konsumen.png ':size=400')
+
+kemudian ketik ``php artisan migrate`` pada terminal untuk membuat table konsumen tersebut di MySQL.
+
+
+
+
