@@ -206,5 +206,77 @@ hasil importnya ada di bagian atas seperti ini
 
 ![](/img/import_konsumen.png ':size=400')
 
+7. Buka kembali ``navigation.blade.php``, kemudian ubah route yang tadinya ``dashboard`` menjadi ``konsumen.index``, sehingga seperti ini
 
+![](/img/navigation_konsumen.png ':size=400')
 
+8. Buka file ``KonsumenController.php`` kemudian pada function ``index`` ketikkan kode berikut ``return view('page.konsumen.index');`` sehingga seperti ini
+
+![](/img/index_konsumen.png ':size=400')
+
+9. Buat folder ``page`` pada folder view lalu buat lagi folder di dalamnya dengan nama ``konsumen`` kemudian buat file ``index.blade.php``
+
+![](/img/page_konsumen.png ':size=300')
+
+10. Buat function ``add``, ``update``, dan ``delete`` pada controller ``KonsumenController.php``
+
+**function index**
+
+```html
+    public function index()
+    {
+        $konsumen = Konsumen::all();
+        return view('page.konsumen.index')->with([
+            'konsumen' => $konsumen
+        ]);
+    }
+```
+
+**function add**
+
+```html
+    public function store(Request $request)
+    {
+        $data = [
+            'konsumen' => $request->input('konsumen'),
+            'status' => $request->input('status'),
+        ];
+
+        Konsumen::create($data);
+
+        return back()->with('message_delete', 'Data Konsumen Sudah dihapus');
+    }
+```
+
+**function update**
+
+```html
+    public function update(Request $request, string $id)
+    {
+        $data = [
+            'konsumen' => $request->input('konsumen_update'),
+            'status' => $request->input('status_update'),
+        ];
+
+        $datas = Konsumen::findOrFail($id);
+        $datas->update($data);
+        return back()->with('message_delete', 'Data Konsumen Sudah dihapus');
+    }
+```
+
+**function delete**
+
+```html
+    public function destroy(string $id)
+    {
+        $data = Konsumen::findOrFail($id);
+        $data->delete();
+        return back()->with('message_delete','Data Konsumen Sudah dihapus');
+    }
+```
+
+11.  Buatlah kode di dalamnya seperti kode di bawah ini
+
+```html
+asdf
+```
