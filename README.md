@@ -582,3 +582,6 @@ hasil importnya ada di bagian atas seperti ini
     </script>
 </x-app-layout>
 ```
+
+> TUGAS
+> Membuat halaman untuk Create, Update, Delete data PRODUK, untuk rancangan table dapat dilihat di rancangan database yang sudah di cantumkan.
