@@ -882,10 +882,10 @@ function destroy
 buat function berikut di dalam tag script, boleh di atas function edit atau di bawah 
 
 ```html
-        const kelasDelete = async (id, kelas) => {
-            let tanya = confirm(`Apakah anda yakin untuk menghapus kelas ${kelas} ?`);
+        const supplierDelete = async (id, supplier) => {
+            let tanya = confirm(`Apakah anda yakin untuk menghapus Supplier ${supplier} ?`);
             if (tanya) {
-                await axios.post(`/kelas/${id}`, {
+                await axios.post(`/supplier/${id}`, {
                         '_method': 'DELETE',
                         '_token': $('meta[name="csrf-token"]').attr('content')
                     })
@@ -900,8 +900,9 @@ buat function berikut di dalam tag script, boleh di atas function edit atau di b
                     });
             }
         }
-
 ```
+
+Untuk lebih jelasnya bisa clone dari github boleh klik [disini](# ':target=_blank')
 
 
 
