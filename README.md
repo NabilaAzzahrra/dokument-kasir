@@ -671,7 +671,7 @@ function destroy
 
     hapus baris yang di blok pada gambar di bawah
 
-     ![](/img/hapush_dashboard_supplier.png ':size=400') 
+     ![](/img/hapus_dashboard_supplier.png ':size=400') 
 
     ganti dengan kode table di bawah
 
