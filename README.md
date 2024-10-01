@@ -902,7 +902,7 @@ buat function berikut di dalam tag script, boleh di atas function edit atau di b
         }
 ```
 
-Untuk lebih jelasnya bisa clone dari github boleh klik [disini]([#](https://github.com/NabilaAzzahrra/web-programming) ':target=_blank')
+Untuk lebih jelasnya bisa clone dari github boleh klik [disini](https://github.com/NabilaAzzahrra/web-programming ':target=_blank')
 
 
 
